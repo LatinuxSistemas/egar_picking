@@ -26,9 +26,14 @@ from openerp.addons import decimal_precision as dp
 class StockPicking(models.Model):
     _inherit = 'stock.picking'
 
-    coil_qty = fields.Float(string='Coil Quantity',
-                            digits_compute=dp.get_precision('Product Unit of Measure'))
     package_qty = fields.Float(string='Package Quantity',
                                digits_compute=dp.get_precision('Product Unit of Measure'))
     insurance_price = fields.Float(string='Insurance Price',
                                    digits_compute=dp.get_precision('Product Price'))
+
+
+class StockMove(models.Model):
+    _inherit = 'stock.move'
+
+    coil_qty = fields.Float(string='Coil Quantity',
+                            digits_compute=dp.get_precision('Product Unit of Measure'))
