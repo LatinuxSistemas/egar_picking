@@ -1,0 +1,41 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* egar_picking
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: <gdavini@latinux.com.ar>\n"
+"POT-Creation-Date: 2015-09-23 14:05+0000\n"
+"PO-Revision-Date: 2015-09-23 14:12+0000\n"
+"Last-Translator: Gabriel Davini <gdavini@latinux.com.ar>\n"
+"Language-Team: Spanish (Argentina)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: es_AR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: egar_picking
+#: view:stock.picking:egar_picking.view_stock_picking_form_inherit_egar
+#: field:stock.picking,coil_qty:0
+msgid "Coil Quantity"
+msgstr "Cantidad de rollos"
+
+#. module: egar_picking
+#: view:stock.picking:egar_picking.view_stock_picking_form_inherit_egar
+#: field:stock.picking,insurance_price:0
+msgid "Insurance Price"
+msgstr "Precio del seguro"
+
+#. module: egar_picking
+#: view:stock.picking:egar_picking.view_stock_picking_form_inherit_egar
+#: field:stock.picking,package_qty:0
+msgid "Package Quantity"
+msgstr "Cantidad de bultos"
+
+#. module: egar_picking
+#: model:ir.model,name:egar_picking.model_stock_picking
+msgid "Picking List"
+msgstr "Lista de remitos"
+
