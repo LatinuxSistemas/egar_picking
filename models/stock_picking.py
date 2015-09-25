@@ -19,17 +19,24 @@
 #
 ##############################################################################
 
-from openerp import models, fields
+from openerp import models, fields, api
 from openerp.addons import decimal_precision as dp
 
 
 class StockPicking(models.Model):
     _inherit = 'stock.picking'
 
+    @api.depends("move_lines")
+    def _compute_kg_total(self):
+        for picking in self:
+            picking.kg_total = sum(picking.mapped("move_lines.product_uom_qty"))
+
     package_qty = fields.Float(string='Package Quantity',
                                digits_compute=dp.get_precision('Product Unit of Measure'))
     insurance_price = fields.Float(string='Insurance Price',
                                    digits_compute=dp.get_precision('Product Price'))
+    kg_total = fields.Float(string='Kg. Total', compute="_compute_kg_total",
+                            digits_compute=dp.get_precision('Product Unit of Measure'))
 
 
 class StockMove(models.Model):
