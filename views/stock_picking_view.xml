@@ -12,6 +12,7 @@
                     <field name="package_qty" required="1" string='Package Quantity'/>
                     <field name="insurance_price" required="1" string='Insurance Price'/>
                     <field name="kg_total" required="1" string='Kg. Total'/>
+                    <field name="coil_total" required="1" string='Coil Total'/>
                 </xpath>
             </field>
         </record>

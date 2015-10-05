@@ -21,7 +21,7 @@
 
 {
     'name': 'Picking extension for E.G.A.R.',
-    'description': "Extend ",
+    'description': "Extend picking to add coil info and total kilos",
     'author': 'Latinux S.A.',
     'website': 'http://www.latinux.com.ar/',
     'depends': ['stock'],

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-23 15:11+0000\n"
-"PO-Revision-Date: 2015-09-23 15:11+0000\n"
+"POT-Creation-Date: 2015-10-05 15:52+0000\n"
+"PO-Revision-Date: 2015-10-05 15:52+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -25,8 +25,20 @@ msgstr ""
 
 #. module: egar_picking
 #: view:stock.picking:egar_picking.view_stock_picking_form_inherit_egar
+#: field:stock.picking,coil_total:0
+msgid "Coil Total"
+msgstr ""
+
+#. module: egar_picking
+#: view:stock.picking:egar_picking.view_stock_picking_form_inherit_egar
 #: field:stock.picking,insurance_price:0
 msgid "Insurance Price"
+msgstr ""
+
+#. module: egar_picking
+#: view:stock.picking:egar_picking.view_stock_picking_form_inherit_egar
+#: field:stock.picking,kg_total:0
+msgid "Kg. Total"
 msgstr ""
 
 #. module: egar_picking

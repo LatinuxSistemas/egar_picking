@@ -27,16 +27,19 @@ class StockPicking(models.Model):
     _inherit = 'stock.picking'
 
     @api.depends("move_lines")
-    def _compute_kg_total(self):
+    def _compute_kg_coil_total(self):
         for picking in self:
             picking.kg_total = sum(picking.mapped("move_lines.product_uom_qty"))
+            picking.coil_total = sum(picking.mapped("move_lines.coil_qty"))
 
     package_qty = fields.Float(string='Package Quantity',
                                digits_compute=dp.get_precision('Product Unit of Measure'))
     insurance_price = fields.Float(string='Insurance Price',
                                    digits_compute=dp.get_precision('Product Price'))
-    kg_total = fields.Float(string='Kg. Total', compute="_compute_kg_total",
+    kg_total = fields.Float(string='Kg. Total', compute="_compute_kg_coil_total", store=True,
                             digits_compute=dp.get_precision('Product Unit of Measure'))
+    coil_total = fields.Float(string='Coil Total', compute="_compute_kg_coil_total", store=True,
+                              digits_compute=dp.get_precision('Product Unit of Measure'))
 
 
 class StockMove(models.Model):

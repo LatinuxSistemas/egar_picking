@@ -46,3 +46,14 @@ msgstr "Cantidad de rollos"
 msgid "Stock Move"
 msgstr "Movimiento de Stock"
 
+#. module: egar_picking
+#: view:stock.picking:egar_picking.view_stock_picking_form_inherit_egar
+#: field:stock.picking,coil_total:0
+msgid "Coil Total"
+msgstr "Cant. total de rollos"
+
+#. module: egar_picking
+#: view:stock.picking:egar_picking.view_stock_picking_form_inherit_egar
+#: field:stock.picking,kg_total:0
+msgid "Kg. Total"
+msgstr "Cant. total de Kilos"
