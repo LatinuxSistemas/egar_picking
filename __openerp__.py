@@ -21,13 +21,17 @@
 
 {
     'name': 'Picking extension for E.G.A.R.',
-    'description': "Extend picking to add coil info and total kilos",
+    'description': """
+        * Extend picking to add coil info and total kilos.
+        * Also add a custom report header layout.
+    """,
     'author': 'Latinux S.A.',
     'website': 'http://www.latinux.com.ar/',
     'depends': ['stock'],
     'init_xml': [],
     'data': [
         'views/stock_picking_view.xml',
+        'views/layouts.xml',
     ],
     'demo_xml': [],
     'test': [],
