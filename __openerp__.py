@@ -27,7 +27,7 @@
     """,
     'author': 'Latinux S.A.',
     'website': 'http://www.latinux.com.ar/',
-    'depends': ['stock'],
+    'depends': ['stock', 'report'],
     'init_xml': [],
     'data': [
         'views/stock_picking_view.xml',

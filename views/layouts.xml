@@ -2,7 +2,7 @@
 <openerp>
 <data>
 
-<template id="external_layout_header">
+<template id="report.external_layout_header">
     <div class="header">
         <div class="row">
             <div class="col-xs-3">
