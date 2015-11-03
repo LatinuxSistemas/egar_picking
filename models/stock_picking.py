@@ -29,8 +29,15 @@ class StockPicking(models.Model):
     @api.depends("move_lines")
     def _compute_kg_coil_total(self):
         for picking in self:
-            picking.kg_total = sum(picking.mapped("move_lines.product_uom_qty"))
-            picking.coil_total = sum(picking.mapped("move_lines.coil_qty"))
+            kg_total = 0
+            coil_total = 0
+            for line in picking.move_lines:
+                coil_total += line.coil_qty
+                if line.product_uom and line.product_uom.name == 'kg':
+                    kg_total += line.product_uom_qty
+
+            picking.kg_total = kg_total
+            picking.coil_total = coil_total
 
     package_qty = fields.Float(string='Package Quantity',
                                digits_compute=dp.get_precision('Product Unit of Measure'))
