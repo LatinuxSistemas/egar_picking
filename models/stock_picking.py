@@ -35,6 +35,8 @@ class StockPicking(models.Model):
                 coil_total += line.coil_qty
                 if line.product_uom and line.product_uom.name == 'kg':
                     kg_total += line.product_uom_qty
+                elif line.product_id:
+                    kg_total += line.product_uom_qty * (line.product_id.weight or 1.0)
 
             picking.kg_total = kg_total
             picking.coil_total = coil_total
