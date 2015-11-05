@@ -19,5 +19,10 @@
 #
 ##############################################################################
 
-import res_partner
-import stock_picking
+from openerp import models, fields
+
+
+class ResPartner(models.Model):
+    _inherit = 'res.partner'
+
+    carrier_id = fields.Many2one('delivery.carrier', string='Carrier', help='Customer Carrier')

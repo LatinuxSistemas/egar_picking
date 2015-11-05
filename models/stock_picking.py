@@ -41,6 +41,13 @@ class StockPicking(models.Model):
             picking.kg_total = kg_total
             picking.coil_total = coil_total
 
+    @api.onchange("partner_id")
+    def _set_default_carrier_id(self):
+        if not self.partner_id or not self.partner_id.carrier_id:
+            self.carrier_id = False
+        else:
+            self.carrier_id = self.partner_id.carrier_id.id
+
     package_qty = fields.Float(string='Package Quantity',
                                digits_compute=dp.get_precision('Product Unit of Measure'))
     insurance_price = fields.Float(string='Insurance Price',

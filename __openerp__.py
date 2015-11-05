@@ -30,6 +30,7 @@
     'depends': ['stock', 'report'],
     'init_xml': [],
     'data': [
+        'views/res_partner_view.xml',
         'views/stock_picking_view.xml',
         'views/layouts.xml',
     ],
